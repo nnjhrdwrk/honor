@@ -259,7 +259,6 @@ header {
 .countdown {
   font-family: sans-serif;
   color: #fff;
-  display: inline-block;
   font-weight: 100;
   text-align: center;
   font-size: 30px;
@@ -276,6 +275,17 @@ header {
   font-size: 90px;
   line-height: 110px;
   font-family: 'Avenir Next Cyr Ultra';
+  display: flex;
+}
+.countdown-number:after {
+	content: ":";
+	color: #000;
+	display: block;
+	padding: 0 0 25%;
+	line-height: 92px;
+}
+.countdown-number:last-child::after {
+	display: none;
 }
  
 .countdown-time {
@@ -351,6 +361,7 @@ header {
 	border-radius: 20px;
 	padding: 35px 60px 80px 60px;
 	text-align: center;
+	position: relative;
 }
 
 .s-city__timer {
@@ -360,7 +371,6 @@ header {
 .countdownx {
   font-family: sans-serif;
   color: #fff;
-  display: inline-block;
   font-weight: 100;
   text-align: center;
   font-size: 30px;
@@ -371,14 +381,26 @@ header {
   height: 110px;
   margin: 0 auto;
 }
+
  
 .countdownx-number {
   color: #000;
   font-size: 90px;
   line-height: 110px;
   font-family: 'Avenir Next Cyr Ultra';
+  display: flex;
 }
- 
+.countdownx-number:after {
+	content: ":";
+	color: #000;
+	display: block;
+	padding: 0 0 25%;
+	line-height: 92px;
+}
+.countdownx-number:last-child::after {
+	display: none;
+}
+
 .countdownx-time {
   color: #000;
   font-size: 90px;
@@ -387,9 +409,9 @@ header {
   margin: 0 25px;
 }
 .s-city__description {
-	font-size: 24px;
-	line-height: 29px;
-	letter-spacing: -0.03em;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.03em;
 }
 .s-city__description b {
 	font-weight: 700;
@@ -519,6 +541,14 @@ footer {
 	.s-run__killometers {
 		font-size: 50px;
 	}
+	.s-workdir__bg {
+		height: none;
+	}
+	.s-workdir__bg:before{
+		display: inline-block;
+		padding: 0 0 50%;
+		content: "";
+	}
 }
 @media only screen and (max-width: 767px) {
 	.s-run__inst {
@@ -580,27 +610,142 @@ footer {
 	.s-workdir {
 		position: relative;
 	}
-/*	.s-workdir__bg:before {
-		position: absolute;
-		content: "";
-		padding: 0 0 75%;
-		background-image: url(../img/workbg.jpg);
-		top: 0;
-		left: 0;
-		background-size: cover;
-		display: inline-block;
+	.countdown-time {
+		font-size: 60px;
 	}
-	.s-workdir__bg {
-		height: 0;
+	.s-run__killometers {
+		font-size: 60px;
+		margin-left: 20px;
+	}
+	.countdownx-time {
+		font-size: 60px;
+		margin: 0 20px;
+	}
+	.countdown-number:after {
 
 	}
-*/
+	.s-run__block h2 {
+		font-size: 45px;
+		line-height: 55px;
+	}
+	.s-city__timer {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	.s-workdir h2 {
+		font-size: 45px;
+		line-height: 55px;
+	}
+	.s-workdir__description {
+		margin-top: 40px;
+	}
+	.b-about__cont h2 {
+		font-size: 50px;
+	}
+	.b-about__description {
+		margin-top: 25px;
+	}
+	.s-hero__title {
+		max-width: none;
+		font-size: 70px;
+	}
 }
 
 
 @media only screen and (max-width: 640px) {
-
+	.s-run__killometers {
+		font-size: 40px;
+		margin-left: 20px;
+	}
+	.countdownx {
+		width: 0;
+	}
+	
 }
 @media only screen and (max-width: 480px) {
-
+	.b-about__cont h2{
+		font-size: 35px;
+	}
+	.b-about__description {
+		margin-top: 30px;
+		font-size: 20px;
+	}
+	.s-workdir h2 {
+		font-size: 35px;
+		line-height: 40px;
+	}
+	.s-workdir__description {
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	.s-video {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.s-run__block h2 {
+		font-size: 35px;
+		line-height: 40px;
+	}
+	.s-run__description {
+		font-size: 20px; 
+	}
+	.s-run__timer {
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+	.s-run__killometers {
+		line-height: 75px;
+	}
+	.s-run__distance {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.s-city__description {
+		font-size: 20px;
+	}
+	.s-city__timer {
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+	.countdownx {
+		display: flex;
+		justify-content: none;
+		width: 0;
+	}
+	.countdownx-number {
+		font-size: 20px;
+		line-height: 50px;
+	}
+	.countdownx-time {
+		margin: 0 8px;
+		font-size: 50px;
+	}
+	.countdownx-number:after {
+		line-height: 105px;
+	}
+	.countdown-number {
+		font-size: 20px;
+		line-height: 50px;
+	}
+	.countdown-time {
+		margin: 0 8px;
+		font-size: 50px;
+	}
+	.countdown-number:after{
+		line-height: 105px;
+	}
+	.header__top {
+		display: block;
+	}
+	.header__top {
+		text-align: center;
+		padding: 15px 0;
+	}
+	.header__nav ul {
+		justify-content: center;
+		margin-top: 20px;
+	}
+	.s-hero__title {
+		font-size: 50px;
+	}
 }
