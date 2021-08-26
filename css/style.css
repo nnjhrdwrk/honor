@@ -27,6 +27,9 @@ body {
 	font-family: 'Avenir Next Cyr';
 	background-color: #E5E5E5;
 }
+body, html {
+	overflow: hidden;
+}
 ol, ul {
 	list-style: none;
 }
