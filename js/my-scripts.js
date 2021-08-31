@@ -85,3 +85,16 @@ initializeClock('countdownx', deadline);
 
 
 
+
+$('[testovoe][s-video__image]').fancybox({
+    youtube : {
+        controls : 0,
+        showinfo : 0
+    },
+    vimeo : {
+        color : 'f00'
+    }
+});
+
+
+
