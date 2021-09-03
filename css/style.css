@@ -534,7 +534,9 @@ footer {
 		padding: 0 0 40%;
 		content: "";
 	}
-	
+	.s-hero {
+		height: 600px;
+	}
 }
 @media only screen and (max-width: 1000px) {
 	.s-gallery-img {
@@ -542,6 +544,8 @@ footer {
 	}
 	.s-gallery-first {
 		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
 	}
 	.s-run__timer {
 		margin-top: 50px;
@@ -557,6 +561,12 @@ footer {
 		display: inline-block;
 		padding: 0 0 40%;
 		content: "";
+	}
+	.s-hero {
+		height: 500px;
+	}
+	.s-hero__title {
+		font-size: 70px;
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -666,6 +676,12 @@ footer {
 		padding: 0 0 45%;
 		content: "";
 	}
+	.s-hero {
+		height: 400px;
+	}
+	.s-hero__title {
+		font-size: 50px;
+	}
 }
 
 
@@ -677,6 +693,7 @@ footer {
 	.countdownx {
 		width: 0;
 	}
+	
 	
 }
 @media only screen and (max-width: 480px) {
@@ -825,5 +842,11 @@ footer {
 	}
 	.s-gallery__second {
 		margin-bottom: 20px;
+	}
+	.s-hero {
+		height: 300px;
+	}
+	.s-hero__title {
+		font-size: 30px;
 	}
 }
