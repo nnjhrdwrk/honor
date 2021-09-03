@@ -537,6 +537,9 @@ footer {
 	.s-hero {
 		height: 600px;
 	}
+	.s-gallery-first {
+		justify-content: center;
+	}
 }
 @media only screen and (max-width: 1000px) {
 	.s-gallery-img {
@@ -693,7 +696,12 @@ footer {
 	.countdownx {
 		width: 0;
 	}
-	
+	.countdown-time {
+		margin: 0 10px;
+	}
+	.countdownx-time {
+		margin: 0 10px;
+	}
 	
 }
 @media only screen and (max-width: 480px) {
